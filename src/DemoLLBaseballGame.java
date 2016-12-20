@@ -2,12 +2,12 @@ public class DemoLLBaseballGame {
     public static void main(String[] args)
     {
         LittleLeagueBaseballGame game1 = new LittleLeagueBaseballGame("One", "Two");
-        game1.setTeam1Score(0, 10);
-        game1.setTeam2SCore(2, 100);
-        game1.setTeam2SCore(0, 20);
-        game1.setTeam2SCore(6,20);
-        System.out.println(game1.getTeam1Score(0));
-        System.out.println(game1.getTeam2SCore(0));
-        System.out.println(game1.getTeam1Name());
+        game1.setscore1(0, 10);
+        game1.setscore2(2, 100);
+        game1.setscore2(0, 20);
+        game1.setscore2(6,20);
+        System.out.println(game1.getscore1(0));
+        System.out.println(game1.getscore2(0));
+        System.out.println(game1.getname1());
     }
 }

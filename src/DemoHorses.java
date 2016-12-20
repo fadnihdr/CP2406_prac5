@@ -4,14 +4,10 @@
 public class DemoHorses {
     public static void main(String[] args)
     {
-        Horse horse1 = new Horse("Hari","Black",1997);
-        System.out.println(horse1.getName());
-        System.out.println(horse1.getColor());
-        System.out.println(horse1.getBirthyear());
-        RaceHorse horse2 = new RaceHorse("Nathan", "Yellow", 1998, 4);
-        System.out.println(horse2.getName());
-        System.out.println(horse2.getColor());
-        System.out.println(horse2.getBirthyear());
-        System.out.println(horse2.getNumberOfRaces());
+        Horse horse1 = new Horse("horse1","black",1996);
+        System.out.println(horse1.getName() + " " + horse1.getColor() + " " + horse1.getBirthyear());
+        RaceHorse horse2 = new RaceHorse("horse2", "green", 1992, 1);
+        System.out.println(horse2.getName() + " " + horse2.getColor() + " " + horse2.getBirthyear() + " " + horse2.getNumberOfRaces());
+
     }
 }

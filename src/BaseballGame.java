@@ -1,96 +1,96 @@
 public class BaseballGame {
-    private String team1Name;
-    private String team2Name;
-    private int[] team1Score;
-    private int[] team2Score;
+    private String name1;
+    private String name2;
+    private int[] score1;
+    private int[] score2;
 
-    public BaseballGame(String team1Name, String team2Name)
+    public BaseballGame(String name1, String name2)
     {
-        this.team1Name = team1Name;
-        this.team2Name = team2Name;
-        this.team1Score = new int[9];
-        for (int i = 0; i <team1Score.length;i++)
+        this.name1 = name1;
+        this.name2 = name2;
+        this.score1 = new int[8];
+        for (int i = 0; i <score1.length;i++)
         {
-            team1Score[i]= -1;
+            score1[i]= -1;
         }
-        this.team2Score = new int[9];
-        for (int i = 0; i <team2Score.length;i++)
+        this.score2 = new int[8];
+        for (int i = 0; i <score2.length;i++)
         {
-            team2Score[i]= -1;
+            score2[i]= -1;
         }
     }
 
-    public String getTeam1Name() {
-        return team1Name;
+    public String getname1() {
+        return name1;
     }
 
-    public void setTeam1Name(String team1Name) {
-        this.team1Name = team1Name;
+    public void setname1(String name1) {
+        this.name1 = name1;
     }
 
-    public String getTeam2Name() {
-        return team2Name;
+    public String getname2() {
+        return name2;
     }
 
-    public void setTeam2Name(String team2Name) {
-        this.team2Name = team2Name;
+    public void setname2(String name2) {
+        this.name2 = name2;
     }
 
-    public int getTeam1Score(int inning) {
-        return team1Score[inning];
+    public int getscore1(int inning) {
+        return score1[inning];
     }
 
-    public void setTeam1Score(int inning, int score) {
-        if(inning<countInning(team1Score))
-        {
-            System.out.println("Cannot change inning score");
-        }
-        else
-        if(inning>team1Score.length)
-        {
-            System.out.println("Game already over");
-        }
-        else
-        if(inning>countInning(team1Score))
-        {
-            System.out.println("Haven't reach that inning");
-        }
-        else
-        {team1Score[inning] = score ;}
-    }
-
-    public int getTeam2SCore(int inning) {
-        return team2Score[inning];
-    }
-
-    public void setTeam2SCore(int inning, int score) {
-        if(inning<countInning(team2Score))
+    public void setscore1(int inning, int score) {
+        if(inning<countInning(score1))
         {
             System.out.println("Cannot change inning score");
         }
         else
-        if(inning>team2Score.length)
+        if(inning>score1.length)
         {
             System.out.println("Game already over");
         }
         else
-        if(inning>countInning(team2Score))
+        if(inning>countInning(score1))
         {
             System.out.println("Haven't reach that inning");
         }
         else
-        {team2Score[inning] = score ;}
+        {score1[inning] = score ;}
+    }
+
+    public int getscore2(int inning) {
+        return score2[inning];
+    }
+
+    public void setscore2(int inning, int score) {
+        if(inning<countInning(score2))
+        {
+            System.out.println("Cannot change inning score");
+        }
+        else
+        if(inning>score2.length)
+        {
+            System.out.println("Game already over");
+        }
+        else
+        if(inning>countInning(score2))
+        {
+            System.out.println("Haven't reach that inning");
+        }
+        else
+        {score2[inning] = score ;}
     }
 
     public void add(String teamname, int score)
     {
-        if(teamname.equals(team1Name))
+        if(teamname.equals(name1))
         {
-            setTeam1Score(countInning(team1Score), score);
+            setscore1(countInning(score1), score);
         }
         else
         {
-            setTeam2SCore(countInning(team2Score), score);
+            setscore2(countInning(score2), score);
         }
 
     }

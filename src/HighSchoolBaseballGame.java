@@ -1,20 +1,20 @@
 public class HighSchoolBaseballGame extends BaseballGame {
 
-    public HighSchoolBaseballGame(String team1Name, String team2Name) {
-        super(team1Name, team2Name);
+    public HighSchoolBaseballGame(String name1, String name2) {
+        super(name1, name2);
     }
-    public void setTeam1Score(int inning, int score) {
+    public void setscore1(int inning, int score) {
         if(inning>6)
         {
             System.out.println("No inning "+ inning);}
         else
-        {super.setTeam1Score(inning, score);}
+        {super.setscore1(inning, score);}
     }
-    public void setTeam2SCore(int inning, int score) {
+    public void setscore2(int inning, int score) {
         if (inning > 6)
         {System.out.println("No inning "+ inning);}
         else {
-            super.setTeam2SCore(inning,score);
+            super.setscore2(inning,score);
         }
     }
 

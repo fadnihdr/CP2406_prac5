@@ -1,7 +1,7 @@
 public class DemoItemsAndPets {
     public static void main(String[] args)
     {
-        ItemSold item1 = new ItemSold(102, "A good doge", 200);
+        ItemSold item1 = new ItemSold(102, "description", 200);
         System.out.println(item1.getNumber());
         System.out.println(item1.getDescription());
         System.out.println(item1.getPrice());
